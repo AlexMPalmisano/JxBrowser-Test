@@ -10,8 +10,12 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>17</java.version>
     <javafx.version>19</javafx.version>
     <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
+    <jxbrowser.version>7.32</jxbrowser.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <repositories>
@@ -30,18 +34,23 @@
     <dependency>
       <groupId>com.teamdev.jxbrowser</groupId>
       <artifactId>jxbrowser-cross-platform</artifactId>
-      <version>7.32</version>
+      <version>${jxbrowser.version}</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>com.teamdev.jxbrowser</groupId>
       <artifactId>jxbrowser-javafx</artifactId>
-      <version>7.32</version>
+      <version>${jxbrowser.version}</version>
     </dependency>
   </dependencies>
   
   <build>
     <plugins>
+<!--      <plugin>-->
+<!--        <artifactId>maven-compiler-plugin</artifactId>-->
+<!--        <configuration>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
